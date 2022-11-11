@@ -18,7 +18,7 @@ npm install
 ### Installing serve
 
 ```bash
-npm i serve -g
+npm i serve -g;
 npm add serve
 ```
 

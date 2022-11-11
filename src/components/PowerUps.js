@@ -23,7 +23,7 @@ export default class PowerUp {
     // add cans of worms
     if (this.tick % 10 != 0) {
       let XPosWorms = Math.floor(Math.random() * (1920 * 0.4)) + 1920 * 0.6;
-      this.scaleWorms = 0.5
+      this.scaleWorms = 0.5;
       this.#powerupCallback(this.worms, XPosWorms, -100, this.scaleWorms);
     }
     // add stephens
@@ -36,7 +36,7 @@ export default class PowerUp {
     // add bubbles
     if (this.tick % 10 == 0) {
       let XPosBubbles = Math.floor(Math.random() * (1920 * 0.4)) + 1920 * 0.6;
-      this.scaleBubbles = 0.3;
+      this.scaleBubbles = 0.5;
       this.#powerupCallback(this.bubbles, XPosBubbles, 1200, this.scaleBubbles);
     }
 
@@ -75,7 +75,9 @@ export default class PowerUp {
 
   #bubblesAnimation() {
     if (IS_TOUCH) {
-      return this.scene.matter.add.image(-200, -200, 'bubblePower', null, { shape: this.physics.bubbles });
+      return this.scene.matter.add.image(-200, -200, 'bubblePower', null, {
+        shape: this.physics.bubbles,
+      });
     } else {
       let bubbleImage = this.scene.matter.add.sprite(-200, -200, 'bubblePower', null, {
         shape: this.physics.bubbles,
@@ -92,9 +94,9 @@ export default class PowerUp {
         repeat: -1,
       };
 
-      this.scene.anims.create(bubblesMove);
-      bubbleImage.anims.load('bubbles-move');
-      bubbleImage.anims.play('bubbles-move');
+      // this.scene.anims.create(bubblesMove);
+      // bubbleImage.anims.load('bubbles-move');
+      // bubbleImage.anims.play('bubbles-move');
 
       return bubbleImage;
     }
@@ -108,8 +110,8 @@ export default class PowerUp {
       powerup.setVelocityX(0);
       powerup.setVelocityY(0);
 
-      if (powerup.y > 1080 - scale * powerup.height / 2) {
-        powerup.y = 1080 - scale * powerup.height / 2;
+      if (powerup.y > 1080 - (scale * powerup.height) / 2) {
+        powerup.y = 1080 - (scale * powerup.height) / 2;
       }
 
       if (powerup.active && (powerup.y < upperLim || powerup.x < -80)) {

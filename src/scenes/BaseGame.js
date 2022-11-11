@@ -8,7 +8,7 @@ export default class BaseGame extends Phaser.Scene {
     this.sound.setVolume(0.1);
 
     // pre game button
-    this.load.image('pre-game-button', '/assets/titles/pre-start-button.png');
+    this.load.image('pre-game-button', '/assets/titles/pre-start-button.jpg');
     // load start button
     this.load.image('start-game-button', 'assets/titles/start-game-button.png');
 
@@ -38,7 +38,6 @@ export default class BaseGame extends Phaser.Scene {
       height: 270,
     });
 
-
     // load moving background
     this.load.svg('background0', 'assets/background/layer-0.svg', { width: 3500, height: 3481 });
     this.load.svg('background1', 'assets/background/layer-1.svg', { width: 1920, height: 1080 });
@@ -51,24 +50,20 @@ export default class BaseGame extends Phaser.Scene {
     // load player
     this.load.atlas(
       'player',
-      'assets/players/player-fish-spritesheet.png',
+      'assets/players/player-eel-spritesheet.png',
       'assets/players/player-fish.json',
     );
 
     // load obstacles
     this.load.svg('rockObstacle', 'assets/obstacles/obstacle-rock.svg');
     this.load.image('shipObstacle', 'assets/obstacles/obstacle-ship-wreck.png');
-    this.load.image('sharkObstacle', 'assets/obstacles/obstacle-shark.png');
+    this.load.image('sharkObstacle', 'assets/obstacles/obstacle-eel.png');
 
     // load powerups
     this.load.image('wormPower', 'assets/powerups/powerup-worm.png');
     this.load.image('octopusStephen', 'assets/powerups/octopus-stephen.png');
-    this.load.image('bubblePower1', 'assets/powerups/bubbles1.png');
-    this.load.atlas(
-      'bubblePower',
-      'assets/powerups/bubbles-spritesheet.png',
-      'assets/powerups/bubbles.json',
-    );
+    this.load.image('bubblePower1', 'assets/powerups/pills.png');
+    this.load.atlas('bubblePower', 'assets/powerups/pills.png', 'assets/powerups/bubbles.json');
   }
 
   setStaticBackground() {
