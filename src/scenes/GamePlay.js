@@ -99,7 +99,7 @@ export default class GamePlay extends BaseGame {
     }
 
     // change music with difficulty
-    if (this.tick % 10000 === 0) {
+    if (this.tick % 8000 === 0) {
       let music1 = this.sound.add('FASTER', { loop: true });
       music1.play();
       this.music.destroy();

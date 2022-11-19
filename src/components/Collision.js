@@ -49,7 +49,7 @@ export default class Collision {
 
       if (this.#fishNStephen(bodyA, bodyB) && this.hitStephen == false) {
         if (this.scene.plugins.get('handling').fishSpeed < 20) {
-          this.scene.plugins.get('handling').fishSpeed += 1.5;
+          this.scene.plugins.get('handling').fishSpeed += 1;
         }
         this.hitStephen = true;
         this.#kill(this.scene.powerups.octopusStephen);
@@ -74,7 +74,7 @@ export default class Collision {
           callback: () => {
             this.scene.player.noCollision = true;
           },
-        })
+        });
       }
 
       if (this.#fishNShips(bodyA, bodyB)) {
@@ -84,7 +84,7 @@ export default class Collision {
           callback: () => {
             this.scene.player.noCollision = true;
           },
-        })
+        });
       }
     });
   }
