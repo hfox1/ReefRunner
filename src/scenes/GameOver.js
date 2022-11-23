@@ -29,10 +29,10 @@ export default class GameOver extends BaseGame {
       this.scene.start('game-play');
     });
 
-    // this.scene.scene.input.keyboard.on('keyup', () => {
-    //   this.music.stop();
-    //   this.scene.start('game-play');
-    // });
+    this.scene.scene.input.keyboard.on('keyup', () => {
+      this.music.stop();
+      this.scene.start('game-play');
+    });
   }
 
   #gameOverText() {
