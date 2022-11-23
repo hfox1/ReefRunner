@@ -1,7 +1,7 @@
 {
   "name": "team-sea-urchins",
   "version": "1.0.0",
-  "description": "Hello friends",
+  "description": "Run the reef",
   "main": "index.js",
   "engines": {
     "node": "18.8.0"
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/naomischlosser/team-sea-urchins.git"
+    "url": "git+https://github.com/hfox1/ReefRunner"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/naomischlosser/team-sea-urchins/issues"
+    "url": "https://github.com/hfox1/ReefRunner/issues"
   },
-  "homepage": "https://github.com/naomischlosser/team-sea-urchins#readme",
+  "homepage": "https://github.com/hfox1/ReefRunner#readme",
   "dependencies": {
     "jest": "^29.1.1",
     "phaser3-rex-plugins": "^1.1.73",
