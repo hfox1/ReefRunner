@@ -1,4 +1,4 @@
-export default class Gravities extends Phaser.Plugins.BasePlugin {
+export default class Handling extends Phaser.Plugins.BasePlugin {
   constructor(pluginManager) {
     super(pluginManager);
 
