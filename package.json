@@ -2,7 +2,7 @@
   "name": "team-sea-urchins",
   "version": "1.0.0",
   "description": "Run the reef",
-  "main": "index.js",
+  "main": "index.html",
   "engines": {
     "node": "18.8.0"
     },
